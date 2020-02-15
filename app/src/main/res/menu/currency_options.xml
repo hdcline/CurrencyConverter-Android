@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/miEuro"
+        android:checkable="false"
+        android:enabled="true"
+        android:title="Euro" />
+    <item
+        android:id="@+id/miYen"
+        android:title="Japanese Yen" />
+    <item
+        android:id="@+id/miPound"
+        android:title="British Pound" />
+    <item
+        android:id="@+id/miCanadianDollar"
+        android:title="Canadian Dollar" />
+    <item
+        android:id="@+id/miSwissFranc"
+        android:title="Swiss Franc" />
+    <item
+        android:id="@+id/miAustralianDollar"
+        android:title="Australian Dollar" />
+    <item
+        android:id="@+id/miPeso"
+        android:title="Mexican Peso" />
+</menu>
