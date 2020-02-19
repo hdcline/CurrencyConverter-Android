@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
 
     Button btnConvert;
 
-    EditText numUSD;
+    TextView numUSD;
     EditText numOther;
 
     TextView tvOther1;
@@ -123,6 +123,7 @@ public class MainActivity extends Activity {
         if (id == R.id.miEuro){
             tvOther.setText("Euro");
             tvOther.setTextSize(36);
+            tvOther.setTextColor(getColor(R.color.euro));
             numOther.setText("");
         }
 
@@ -130,36 +131,42 @@ public class MainActivity extends Activity {
             tvOther.setText("Japanese\nYen");
             tvOther.setTextSize(20);
             numOther.setText("");
+            tvOther.setTextColor(getColor(R.color.japaneseYen));
         }
 
         else if (id == R.id.miPound){
             tvOther.setText("British\nPound");
             tvOther.setTextSize(22);
             numOther.setText("");
+            tvOther.setTextColor(getColor(R.color.britishPound));
         }
 
         else if (id == R.id.miCanadianDollar){
             tvOther.setText("Canadian\nDollar");
             tvOther.setTextSize(20);
             numOther.setText("");
+            tvOther.setTextColor(getColor(R.color.canadianDollar));
         }
 
         else if (id == R.id.miSwissFranc){
             tvOther.setText("Swiss\nFranc");
             tvOther.setTextSize(27);
             numOther.setText("");
+            tvOther.setTextColor(getColor(R.color.swissFranc));
         }
 
         else if (id == R.id.miAustralianDollar){
             tvOther.setText("Australian\nDollar");
             tvOther.setTextSize(20);
             numOther.setText("");
+            tvOther.setTextColor(getColor(R.color.australianDollar));
         }
 
         else if (id == R.id.miPeso){
             tvOther.setText("Mexican\nPeso");
             tvOther.setTextSize(22);
             numOther.setText("");
+            tvOther.setTextColor(getColor(R.color.mexicanPeso));
         }
 
         return super.onOptionsItemSelected(item);
@@ -207,11 +214,16 @@ class ConversionRate extends AsyncTask<Void, Void, Void> {
         super.onPostExecute(aVoid);
 
 
-        usd = Double.parseDouble(numUSD.getText().toString());
-        conversion = usd * conversionRate;
-        strConversion = Double.toString(Math.round(conversion * 100.0) / 100.0);
+        if (numUSD.getText().toString().length() > 0){
+            usd = Double.parseDouble(numUSD.getText().toString());
+            conversion = usd * conversionRate;
+            strConversion = Double.toString(Math.round(conversion * 100.0) / 100.0);
 
-        numOther.setText(strConversion);
+            numOther.setText(strConversion);
+        }
+        else{
+            numOther.setText("0.00");
+        }
     }
   }
 }

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="usd">#B2FF59</color>
+    <color name="euro">#FF5252</color>
+    <color name="japaneseYen">#FF4081</color>
+    <color name="britishPound">#E040FB</color>
+    <color name="canadianDollar">#7C4DFF</color>
+    <color name="swissFranc">#536DFE</color>
+    <color name="australianDollar">#448AFF</color>
+    <color name="mexicanPeso">#40C4FF</color>
 </resources>
